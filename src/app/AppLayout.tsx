@@ -13,6 +13,7 @@ const SECTIONS = [
   { to: "/", key: "labs", icon: "board", match: /^\/($|lessons|tracks)/ },
   // Shipped 25 Oct 2026: marked new for three days.
   { to: "/datasheet", key: "chip", icon: "chip", match: /^\/datasheet/, newUntil: "2026-10-28" },
+  { to: "/workbench", key: "workbench", icon: "wire", match: /^\/workbench/ },
   { to: "/log", key: "bench", icon: "log", match: /^\/log/ },
   { to: "/settings", key: "settings", icon: "sliders", match: /^\/settings/ },
 ] as const satisfies readonly {

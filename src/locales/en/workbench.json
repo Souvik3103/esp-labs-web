@@ -1,0 +1,35 @@
+{
+  "kicker": "PlatformIO project notebook",
+  "title": "Workbench",
+  "intro": "Keep each ESP32 build together: target board, current stage, wiring assignments, and working notes.",
+  "saved": "Projects save automatically in this browser. They are not uploaded or synced.",
+  "add": "New project",
+  "untitled": "Untitled project",
+  "projectLabel": "Project",
+  "remove": "Remove",
+  "deleteConfirm": "Remove “{{name}}” from this browser? This cannot be undone.",
+  "empty": {
+    "title": "Start a project notebook",
+    "body": "Track what you are building and keep your pin map and notes close at hand.",
+    "add": "Create your first project"
+  },
+  "fields": {
+    "name": "Project name",
+    "namePlaceholder": "e.g. Desk air monitor",
+    "board": "Target board",
+    "boardPlaceholder": "e.g. ESP32-S3 DevKitC-1",
+    "status": "Status",
+    "wiring": "Wiring and pin assignments",
+    "wiringPlaceholder": "GPIO 4 → SDA on the sensor\nGPIO 5 → SCL on the sensor",
+    "wiringHint": "One connection per line. Double-check your board's printed pin labels before wiring.",
+    "notes": "Build notes",
+    "notesPlaceholder": "PlatformIO environment, libraries, test results, things to try…"
+  },
+  "statuses": {
+    "idea": "Idea",
+    "wiring": "Wiring",
+    "building": "Building",
+    "testing": "Testing",
+    "done": "Done"
+  }
+}

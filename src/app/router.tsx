@@ -67,6 +67,10 @@ export const router = createHashRouter([
             lazy: async () => ({ Component: (await import("./routes/settings-route")).Component }),
           },
           {
+            path: "workbench",
+            lazy: async () => ({ Component: (await import("./routes/workbench-route")).Component }),
+          },
+          {
             path: "parts",
             lazy: async () => ({ Component: (await import("./routes/parts-route")).Component }),
           },

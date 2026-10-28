@@ -61,6 +61,37 @@ describe("App", () => {
     );
   });
 
+  it("saves PlatformIO project notes in this browser", async () => {
+    window.location.hash = "#/";
+    const App = await loadApp();
+    render(<App />);
+    await userEvent.click(await screen.findByRole("link", { name: "Workbench" }, LOAD));
+    await userEvent.click(await screen.findByRole("button", { name: "Create your first project" }));
+
+    await userEvent.type(screen.getByRole("textbox", { name: "Project name" }), "Air monitor");
+    await userEvent.type(screen.getByRole("textbox", { name: "Target board" }), "ESP32-S3");
+    await userEvent.selectOptions(screen.getByRole("combobox", { name: "Status" }), "wiring");
+    await userEvent.type(
+      screen.getByRole("textbox", { name: /Wiring and pin assignments/ }),
+      "GPIO 4 -> SDA",
+    );
+    await userEvent.type(
+      screen.getByRole("textbox", { name: "Build notes" }),
+      "Use the default PlatformIO environment",
+    );
+
+    expect(JSON.parse(localStorage.getItem("esp-workbench-projects") ?? "[]")).toEqual([
+      {
+        id: expect.any(String),
+        name: "Air monitor",
+        board: "ESP32-S3",
+        status: "wiring",
+        wiring: "GPIO 4 -> SDA",
+        notes: "Use the default PlatformIO environment",
+      },
+    ]);
+  });
+
   // Last: the language it switches to outlives the test (its router keeps the page URL).
   it("opens a shared link in its language, then keeps the language in the URL", async () => {
     window.location.hash = "#/lessons/02?lang=fr";

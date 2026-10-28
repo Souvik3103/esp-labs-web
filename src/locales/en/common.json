@@ -18,6 +18,7 @@
     "nav": {
       "labs": "Labs",
       "chip": "Datasheet",
+      "workbench": "Workbench",
       "bench": "Bench",
       "settings": "Settings"
     },
@@ -29,6 +30,7 @@
     "labs": "Labs · ESP32-S3 Bench Guide",
     "lesson": "{{id}} · {{title}} · ESP32-S3 Bench Guide",
     "code": "{{id}} code · {{title}} · ESP32-S3 Bench Guide",
+    "workbench": "Workbench · ESP32-S3 Bench Guide",
     "log": "Bench log · ESP32-S3 Bench Guide",
     "parts": "Parts library · ESP32-S3 Bench Guide",
     "settings": "Settings · ESP32-S3 Bench Guide",
